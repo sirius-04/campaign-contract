@@ -68,19 +68,19 @@ contract Campaign {
 }
 
 contract CampaignFactory {
-  address[] public deployedCampaigns;
+  address payable[] public deployedCampaigns;
 
   event CampaignCreated(address campaignAddress, address creator);
 
   function createCampaign(uint256 minimum) public {
     Campaign newCampaign = new Campaign(minimum, msg.sender);
     
-    deployedCampaigns.push(address(newCampaign));
+    deployedCampaigns.push(payable(address(newCampaign)));
     
     emit CampaignCreated(address(newCampaign), msg.sender);
   }
 
-  function getDeployedCampaigns() public view returns (address[] memory) {
+  function getDeployedCampaigns() public view returns (address payable[] memory) {
     return deployedCampaigns;
   }
 }
