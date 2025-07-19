@@ -6,7 +6,7 @@
   "scripts": {
     "test": "hardhat test",
     "compile": "hardhat compile",
-    "deploy": "hardhat ignition deploy ./ignition/modules/Campaign.js --network sepolia"
+    "deploy": "hardhat ignition deploy ./ignition/modules/CampaignFactory.js --network sepolia"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,6 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "dotenv": "^17.2.0",
-    "hardhat": "^2.26.0"
+    "hardhat": "^2.25.0"
   }
 }
